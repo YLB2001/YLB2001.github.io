@@ -551,6 +551,34 @@
           <img src="assets/images/servercode.png" alt="hardware" width="400" height="300">
         </figure>
 
+        <header>
+          <h2 class="h2 article-title">The locationing code</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            My locationing algorithm do is hardcode the position of my beacons into a map. Then, it will get the rssi data from the server. Then it picks 3 beacons with highest rssi-data value. Then, I used those values to get the location by using the method of Trilateration.
+            I made an assumption that the signal strength is inversely proportional to the square of the distance from the beacon.
+            How Trilateration works is consider a two-dimensional space, each distance measurement places the device on the circumference of a circle centered on the beacon. The radius of each circle is equal to the estimated distance to the beacon. The device's location is where these three circles intersect.
+            In order to reduce the possiblity of instablilty of rssi-data, I take average of three estimated locations and give the final estimation.
+          </p>
+        </section>
+
+        <header>
+          <h2 class="h2 article-title">Evaluation of the result</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            The estimation I made shows that it's possible to predict the location of a device. However, the precision is still low with an error range of 20-30%
+          </p>
+        </section>
+
+
+
+
+
+
 
 
 
